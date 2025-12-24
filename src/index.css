@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Top blue theme stripe across the entire application */
+.app-top-stripe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  z-index: 2000;
+  background: linear-gradient(90deg, #3b82f6 0%, #7c3aed 50%, #4338ca 100%);
+}
+
+/* add a small body padding to avoid content under the stripe if needed */
+body.with-top-stripe {
+  padding-top: 4px;
+}
+
+/* Main content shift when sidebar is fixed-positioned */
+.main-content {
+  margin-left: 0; /* default: no shift */
+  transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When the sidebar is present we add `sidebar-visible` to body to shift content */
+body.sidebar-visible .main-content {
+  margin-left: 250px; /* expanded sidebar width */
+}
+
+body.sidebar-visible.sidebar-collapsed .main-content {
+  margin-left: 80px; /* collapsed sidebar width */
+}
+
+@media (max-width: 768px) {
+  /* On small screens sidebar overlays content, so keep no left margin */
+  .main-content {
+    margin-left: 0 !important;
+  }
+  body.sidebar-visible .main-content {
+    margin-left: 0 !important;
+  }
+  body.sidebar-visible.sidebar-collapsed .main-content {
+    margin-left: 0 !important;
+  }
+}

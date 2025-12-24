@@ -1,0 +1,9 @@
+.card .form-control { min-width: 220px; }
+.table thead th { font-weight: 600; }
+.table tbody td { vertical-align: middle; }
+.table tfoot th { font-weight: 700; }
+.text-end { text-align: right; }
+
+@media (max-width: 576px) {
+  .card .form-control { min-width: auto; }
+}

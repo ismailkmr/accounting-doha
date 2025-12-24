@@ -1,0 +1,31 @@
+.card .form-label { font-size: 0.85rem; }
+.table thead th { font-weight: 600; }
+.table tbody td { vertical-align: middle; }
+.table tfoot th { font-weight: 700; }
+
+.text-end { text-align: right; }
+
+.container .btn-outline-secondary { margin-left: 8px; }
+
+/* Fix debit/credit input widths */
+.debit-col {
+  max-width: 80px;
+  flex: 0 0 auto;
+  margin-right: 16px;
+}
+
+.credit-col {
+  max-width: 80px;
+  flex: 0 0 auto;
+}
+
+form .form-control-sm {
+  width: 100%;
+  max-width: 80px;
+}
+
+@media (max-width: 768px) {
+  .debit-col, .credit-col {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f6f8fb 0%, #ffffff 100%);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Default when sidebar is expanded */
+body:not(.sidebar-collapsed) .dashboard-container {
+  margin-left: 250px;
+}
+
+/* When sidebar is collapsed */
+body.sidebar-collapsed .dashboard-container {
+  margin-left: 80px;
+}
+
+.dashboard-container .card {
+  border-radius: 12px;
+  background: #ffffff;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.dashboard-container .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.06);
+}
+
+.dashboard-container h2 {
+  color: #1f2937;
+}
+
+.dashboard-container .card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.dashboard-container .card-text {
+  font-size: 0.9rem;
+}
+
+.dashboard-container .btn-outline-primary {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 0;
+  }
+}

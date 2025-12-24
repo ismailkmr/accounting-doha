@@ -25,6 +25,7 @@ function AppContent() {
         <div className="app-top-stripe" />
         <Routes>
           <Route path="/" element={<Login />} />
+
           
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/daybook" element={<Daybook />} />
